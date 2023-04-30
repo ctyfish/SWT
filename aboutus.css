@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+body{
+    background-color: #FFFAE7;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+}
+
+.nav-link:hover{
+    color: #FABD51 !important;
+}
+
+.dropdown-item:hover{
+    color: #FABD51 !important;
+}
