@@ -13,3 +13,96 @@ body{
 .dropdown-item:hover{
     color: #FABD51 !important;
 }
+/*上架商品*/
+.upload{
+    z-index: 1;
+    top: 69%;
+    left: 41.2%;
+
+    width: 17.5%;
+    height:8%;
+}
+.product_information{
+    margin:6%;
+
+}
+.product-input{
+    background-color: rgba(255,255,255,0.5);
+    border: min(max(0.25vw, 2px), 3px) solid #A49079;
+    left:-2%;
+    width: 105%;
+}
+.product-input-tag{
+    color:#A49079;
+    font-size: min(max(2.5vw, 90%), 120%);
+    font-weight:bold;
+    letter-spacing: 1%;
+}
+
+button.upload{
+    margin-top: 3%;
+    width: 25%;
+}
+.select-classification{
+    z-index: 1;
+    top:43%;
+    width: 95%;
+}
+
+.product-title{
+    color:#573605;
+    font-size: min(max(6vw, 180%), 250%);
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+.avatar{
+    width:6%;
+    min-width: 50px;
+    height:auto; 
+    border-radius: 50%;
+    box-shadow: 0.5px 4px 7px rgba(0, 0, 0, 0.4);
+    margin-right: max(25px, 9%);
+}
+.name-display{
+    color:#573605;
+    font-size: min(max(4vw, 130%), 160%);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.check-infor{
+    color:#C9B99F;
+    border-color:#C9B99F;
+    border-width: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 25%;
+    max-width: 90px;
+    min-width: 70px;
+    font-size: min(max(2.5vw, 40%), 90%);
+}
+.distance{
+    margin-left:1.5%;
+}
+h{
+    color:#573605;
+}
+.share-btn{
+    color:#573605;
+    background-color: #FDBF52;
+    width: 13%;
+    min-width: 120px;
+    font-size: min(max(3vw, 50%), 100%);
+}
+.product-display{
+    max-width: 700px;
+}
+.distance-text{
+    color: #FDBF52;
+    font-size: min(max(3.5vw, 100%), 130%);
+}
+.rating{
+    width:200px;
+}
+.bi-star{
+    margin-left: max(13px, 3%);
+}
+/******5/2 17:01 revise*******/
