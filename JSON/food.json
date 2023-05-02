@@ -1,0 +1,35 @@
+{
+    "Bababa":[
+        {
+            "category" : "none",
+            "merchandise" : "none",
+            "photo" : "none",
+            "price": "none",
+            "location": "none",
+            "number" : "none",
+            "rating" : "0",
+            "isShared" : "n"
+        }
+    ],
+    "Jess":[
+        {
+            "category" : "享食",
+            "merchandise" : "多的洋芋片",
+            "photo" : "",
+            "price": "NTD$10",
+            "location": "台南市東區",
+            "number" : "0x00001",
+            "rating" : "5",
+            "isShared" : "y"
+        },
+        {
+            "category" : "享食",
+            "merchandise" : "吃不完的糖果",
+            "price": "NTD$1",
+            "location": "台南市東區",
+            "number" : "0x00002",
+            "rating" : "0",
+            "isShared" : "n"
+        }
+    ]
+}

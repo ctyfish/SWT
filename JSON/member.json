@@ -1,0 +1,20 @@
+{
+    "member-list" :[
+        {
+            "name" : "Bababa",
+            "nickname": "Bababa",
+            "phone-number" : "0912345678",
+            "mail" : "abc123@gmail.com",
+            "passwd": "abc123",
+            "location" : "none"
+        },
+        {
+            "name" : "Jess",
+            "nickname": "Jess",
+            "phone-number" : "0900112233",
+            "mail" : "jess2828@gmail.com",
+            "passwd": "jess123",
+            "location" : "Tainan"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "Bababa":[
+        {
+            "category" : "none",
+            "merchandise" : "none",
+            "photo" : "none",
+            "price": "none",
+            "location": "none",
+            "number" : "none",
+            "rating" : "0",
+            "isShared" : "n"
+        }
+    ],
+    "Jess":[
+        {
+            "category" : "享衣",
+            "merchandise" : "婚紗租借",
+            "photo" : "",
+            "price": "NTD$1000",
+            "location": "台南市東區",
+            "number" : "0x00001",
+            "rating" : "0",
+            "isShared" : "n"
+        }
+    ]
+}
