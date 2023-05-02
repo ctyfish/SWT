@@ -50,6 +50,124 @@
               </div>
             </div>
         </nav>
+
+<!--5/2 16:54 revise-->        
+        <!--上架商品-->
+        <div class="d-flex justify-content-center" style="display:none;">
+          <div class="position-relative product-display" id="product-upload" style="display:none;">
+            <!--上傳圖片-->
+            <div class="position-relative">
+              <img src="picture/upload_photo.png" class="img-fluid" alt="上傳照片">
+              <form action="product.JSON" method="post" enctype="multipart/form-data">
+                <input class="form-control opacity-0 position-absolute rounded-pill upload" id="formFileLg" type="file">
+              </form>   
+            </div>
+            <!--select-->
+            <form  id="product-form" class="product_information d-flex flex-column" method="post">
+              <div class="row mb-4">
+                <label for="product-name" class="col-sm-2 col-form-label product-input-tag">
+                  產品名稱
+                </label>
+                <div class="col-sm-10">
+                  <input class="form-control product-input rounded-pill position-relative" type="text" id="product-name">
+                </div>  
+              </div>
+              <div class="row mb-4">
+                <label for="product-classification" class="col-sm-2 col-form-label product-input-tag">
+                  選擇分類
+                </label>
+                <div class="col-sm-10">
+                  <select class="custom-select form-select product-input rounded-pill position-relative" id="product-classification">
+                    <option selected>
+                    </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div> 
+              </div>
+              <div class="row mb-4">
+                <label for="product-price" class="col-sm-2 col-form-label product-input-tag">
+                  產品單價
+                </label>
+                <div class="col-sm-10">
+                  <input class="form-control product-input rounded-pill position-relative" type="text" id="product-price">
+                </div>  
+              </div>
+              <div class="row mb-4">
+                <label for="product-location" class="col-sm-2 col-form-label product-input-tag">
+                  所在地點
+                </label>
+                <div class="col-sm-10">
+                  <input class="form-control product-input rounded-pill position-relative" type="text" id="product-location">
+                </div>  
+              </div>
+              <button type="submit" class="btn position-relative upload">
+                <img src="picture/上架.png" class="img-fluid position-absolute top-0 start-50 translate-middle" alt="上架">
+              </button>
+            </form>
+          </div> 
+        </div>
+
+        <!--商品展示加推薦欄-->
+        <div class="d-flex justify-content-center" id="display" style="display:none;">
+            <!--商品展示-->
+            <div class="product-display" style="display:none;">
+              <img src="picture/商品照片.png" alt="商品照片" class="img-fluid">
+              <!--介紹-->
+              <div class="m-5 pt-3">
+                <div class="product-title mb-5">好吃的熱壓三明治</div>
+                <div class="row">
+                  <!--名字照片-->
+                  <div class="d-flex justify-content-start my-4 col-8 ms-2">
+                    <img src="picture/二毛.jpg" class="avatar align-self-center row" alt="頭像">
+                    <div class="name-display align-self-center me-5 row">二毛</div>
+                    <button type="button" class="align-self-center btn check-infor rounded-pill row">查看</button>
+                  </div>
+                  <!--星級-->
+                  <div class="rating align-self-center d-flex justify-content-start col my-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                    </svg>
+                  </div>
+                </div>
+                  
+                <!--距離-->
+                <div class="mt-3 me-4 distance d-flex justify-content-start">
+                  <img src="picture/距離.png" alt="距離" class="align-self-center me-4" style="width:6%; max-width: 30px;">
+                  <div class="align-self-center distance-text">距離1.8km</div>
+                </div>
+                <!--內容-->
+                <div class="my-5">
+                  <h>
+                    內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介
+      內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介
+      內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介
+      內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介
+      內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介 內容簡介內容簡介內容簡介內容簡介內容簡介內容簡介
+                  </h>
+                </div>
+                <!--+共享button-->
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="align-self-center btn share-btn rounded-pill">+共享</button>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+<!---->
         <!--Footer-->
         <footer class="container-fluid mt-4" style="background-color: #927858;">
           <div class="row">
