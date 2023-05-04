@@ -1,0 +1,270 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>享都不用想</title>
+        <!--Bootstrap5 CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="./aboutus.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color:#FFFAE7;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);position: sticky;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/main.html">
+                <img src="./icon/platformlogo.png" alt="" width="45" height="45">
+              </a>
+              <button class="navbar-toggler" style="color:#573605;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="#">享食</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="#">享衣</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="#">享住</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="#">享行</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="#">關於我們</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav">
+                  <input class="form-control me-2" type="search" placeholder="搜尋..." aria-label="Search">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:#573605;font-weight:500;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="./icon/membericon.png" width="15" height="20">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" style="background-color:#FFFAE7;" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" style="color:#573605;font-weight:500;" href="#">會員登入</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div style="display: flex;">
+          <div style="width: 33%; height: 100%; ">  
+            <!--Photo-->
+            <div class="row">
+                <div style="padding: 20px;"> 
+                  <div class="row mb-3">                 
+                    <img src="./icon/head.png" width="150px" height="300px" alt="大頭貼">
+                    <div class="position-relative">
+                      <img src="./icon/照片button.png" class="img-fluid position-absolute top-0 start-100 translate-middle" alt="上傳照片">
+                      <form action="product.JSON" method="post" enctype="multipart/form-data">
+                        <input class="form-control opacity-0 position-absolute rounded-pill photo" id="formFileLg" type="file">
+                      </form>   
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn position-relative photo">
+                      <img src="./icon/編輯會員照片.png" width="300px" height="50px" alt="photo">
+                    </button>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn position-relative edit" onclick="show_hide()">
+                      <img src="./icon/修改會員資料.png"  width="300px" height="50px" alt="edit">
+                    </button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+            <!-- Register & Login Form -->
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-3">
+                    <div class="card" style="background-color: #FFFAE7;">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs nav-justified mb-4">
+                        <li class="nav-item-1">
+                            <a class="nav-link active" style="background-color: #FFFAE7;" aria-current="page" onclick="show_hide()" href="#">註冊會員</a>
+                        </li>
+                        <li class="nav-item-2">
+                            <a class="nav-link active" style="background-color: #FFFAE7;" aria-current="page" onclick="show_hide()" href="#">登入會員</a>
+                        </li>
+                        </ul>
+                        <div id="container1">
+                          <form  id="account-form" class="account_information d-flex flex-column" method="post">
+                            <div>
+                              <label for="realname">
+                                真實姓名
+                              </label>
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="realname" name="realname" required>
+                            </div>
+                            <div>
+                              <label for="account-nickname">
+                                使用者暱稱
+                              </label>
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="account-nickname" name="account-nickname" required>
+                            </div>
+                            <div>
+                              <label for="account-price">
+                                手機
+                              </label>
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="account-price" name="account-price" required>
+                            </div>
+                            <div>
+                              <label for="account-mail">
+                                信箱
+                              </label>                          
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="account-mail" name="account-mail" required>
+                            </div>
+                            <div>
+                              <label for="account-password">
+                                密碼
+                              </label>
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="account-password" name="account-password" required>
+                            </div>
+                            <div>
+                              <label for="account-location">
+                                居住地(選填)
+                              </label>
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="account-location" name="account-location" required>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div id="container2">
+                          <form  id="account-form" name ="account-form" class="account_information d-flex flex-column" method="post">
+                            <div>
+                              <label for="account-phone2">
+                                手機
+                              </label>
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="account-price" name="account-price" required>
+                            </div>
+                            <div>
+                              <label for="account-password2">
+                                密碼
+                              </label>
+                              <input class="form-control account-input rounded-pill position-relative" style="background-color: #FFFAE7;" type="text" id="account-password" name="account-password" required>
+                            </div>
+                          </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!--Send-->
+            <div class="row justify-content-center">
+              <div class="col-md-4 mt-5">
+                <div class="row justify-content-center">
+                <button type="button" class="btn position-relative inform" data-bs-toggle="modal" data-bs-target="#informModal">
+                  <img src="./icon/送出.png" class="img-fluid position-absolute top-0 start-100 translate-middle" alt="送出">
+                </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="modal fade" id="informModal" tabindex="-1" aria-labelledby="informModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color:#FFFFFF;">
+              <div class="modal-header" style="background-color:#FABD51;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body mx-auto">
+                <img src="./icon/highfive_brown.png" width="150px" height="150px">
+                <p style="margin-top:20px;font-size:20px;color:#573605;font-weight:700;text-align:center;"> Welcome!</p>
+              </div>
+              <div class="modal-footer gap-3 mx-auto" style="border-style:none;">
+                <button type="button" onclick="window.location='http://luffy.ee.ncku.edu.tw:7320/main.html'" class="btn btn-primary" style="width:130px;border-radius:50px 50px 50px 50px;font-weight:700;background-color:#FABD51;border-style:solid;border-color:#FABD51;color:#573605;border-width:3px;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.2);">回首頁</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid" style="color:#FFFAE7;">
+          <div class="row">
+            <div class="col-md-1 mt-5"></div>
+            <div class="col-md-5 mt-5">
+              <div class="row mb-5">
+              </div>
+              <div class="row">
+                <p style="color:#573605;font-weight:700;font-size:3vh;">| 歷史資料 |</p>
+                <p style="color:#573605;font-weight:500;font-size:2.5vh;letter-spacing:1px;">
+                  歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料
+                  歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料
+                  歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料
+                  歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料
+                  歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料歷史資料
+                </p>
+              </div>
+              </div>
+          </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-md-1 mt-5"></div>
+            <div class="col-md-5 mt-5">
+              <div id="History" class="History" data-bs-ride="History">
+                  <img src="./icon/History.png" width="300px" height="240px">
+              </div>
+            </div>
+        <!--Bottom-->
+        <footer class="container-fluid mt-4" style="background-color: #927858;">
+          <div class="row">
+            <div class="col-5">
+              <div class="row">
+                <div class="col-md-3 mt-3">
+                  <img src="./icon/platformlogo.png" width="105" height="105">
+                </div>
+                <div class="col-md-4 mt-5 mb-5">
+                  <h3 style="color:#FFFFFF;font-weight:700;">享都不用想</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5 mt-3">
+              <div class="row">
+                <div class="col-2">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享食</a>
+                </div>
+                <div class="col-2">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享衣</a>
+                </div>
+                <div class="col-2">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享住</a>
+                </div>
+                <div class="col-2">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享行</a>
+                </div>
+                <div class="col-4">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">關於我們</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-7 mt-3">
+                  <p style="color:#FFFFFF;font-weight:500;overflow:hidden;">service@sharewithoutthinking.com</p>
+                  <p style="color:#FFFFFF;font-weight:500;">06-123-4567</p>
+                </div>
+                <div class="col-md-5 mt-4 mb-1">
+                  <div class="row">
+                    <div class="col-2">
+                      <img src="./icon/facebook icon.png" width="24" height="24">
+                    </div>
+                    <div class="col-2">
+                      <img src="./icon/instagram icon.png" width="24" height="24">
+                    </div>
+                    <div class="col-2">
+                      <img src="./icon/youtube icon.png" width="24" height="24">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </footer>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </body>
+</html>

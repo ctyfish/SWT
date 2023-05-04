@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+body{
+    background-color: #FFFAE7;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+}
+
+.nav-link:hover{
+    color: #FABD51 !important;
+}
+
+.dropdown-item:hover{
+    color: #FABD51 !important;
+}
+/*註冊會員*/
+.account-input{
+  background-color: rgba(255,255,255,0.5);
+  border: min(max(0.25vw, 2px), 3px) solid #A49079;
+  left:-2%;
+  width: 105%;
+}
+.label{
+  color: #573605;
+}
+h{
+  color:#573605;
+}
