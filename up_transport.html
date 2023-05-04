@@ -131,11 +131,35 @@
                     <textarea class="form-control product-input rounded position-relative align-top" id="product-content" style="height: 200px;"></textarea>
                   </div> 
                 </div>
-                <button type="submit" class="btn position-relative upload">
-                  <img src="./icon/上架.png" class="img-fluid position-absolute top-0 start-50 translate-middle" alt="上架">
-                </button>
+                <div class="row mb-4 d-flex justify-content-center">
+                  <button type="submit" class="btn submit-btn rounded-pill" onclick="submit_event(event)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    上架
+                  </button>
+                </div>
               </form>
             </div> 
+        </div>
+        <!-- Modal -->
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="col">
+            <div class="modal-dialog d-flex justify-content-center row">
+              <img src="picture/上架成功.png" alt="上架成功" style="width:70%;">
+            </div>
+            <div class="row">
+              <div class="col d-flex justify-content-center">
+                <a href="/showproduct.html" aria-current="page" style="color:#573605;text-decoration:none;">
+                  <button type="button"  class="btn row leave-submit rounded-pill z-1" style="background-color: white; border-color:#FABD51; border-width: 2px;">
+                    查看
+                  </button>
+                </a>
+                <a href="/main.html" aria-current="page" style="color:#573605;text-decoration:none;">
+                  <button type="button" href="/main.html" class="btn row leave-submit rounded-pill z-1">
+                    回首頁
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <!--Footer-->
         <footer class="container-fluid mt-4" style="background-color: #927858;">
