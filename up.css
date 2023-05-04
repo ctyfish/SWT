@@ -105,3 +105,31 @@ h{
 .bi-star{
     margin-left: max(13px, 3%);
 }
+.submit-btn{
+    color:#573605;
+    background-color: #FDBF52;
+    width: 15%;
+    min-width: 140px;
+    font-size: min(max(3vw, 40%), 90%);
+    font-weight: bold;
+    box-shadow: 0.5px 4px 7px rgba(0, 0, 0, 0.4);
+}
+.leave-submit{
+    
+    background-color: #FDBF52;
+    width: 30%;
+    min-width: 120px;
+    font-size: 20%;
+    font-weight: bold;
+    box-shadow: 0.5px 4px 7px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: -250%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.date-sel{
+    position: relative;
+    top: -49vh;
+    left: 20vh;
+}
