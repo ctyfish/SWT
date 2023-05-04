@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>享都不用想</title>
+        <!--Bootstrap5 CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="./up.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color:#FFFAE7;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);position: sticky;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./icon/platformlogo.png" alt="" width="45" height="45">
+              </a>
+              <button class="navbar-toggler" style="color:#573605;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/itemfood.html">享食</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/itemcloth.html">享衣</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/itemroom.html">享住</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/itemtransport.html">享行</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/aboutus.html">關於我們</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav">
+                  <input class="form-control me-2" style="border-radius: 20px 20px 20px 20px;box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);" type="search" placeholder="搜尋..." aria-label="Search">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:#573605;font-weight:500;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="./icon/membericon.png" width="15" height="20">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" style="background-color:#FFFAE7;" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" style="color:#573605;font-weight:500;" href="#">會員登入</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div class="d-flex justify-content-center">
+            <div class="position-relative product-display" id="product-upload">
+              <!--上傳圖片-->
+              <div class="position-relative">
+                <img src="./icon/upload_photo.png" class="img-fluid" alt="上傳照片">
+                <form action="product.JSON" method="post" enctype="multipart/form-data">
+                  <input class="form-control opacity-0 position-absolute rounded-pill upload" id="formFileLg" type="file" name="image" accept="image/*"><!--後端一定要check-->
+                </form>   
+              </div>
+              <!--select-->
+              <form  id="product-form" class="product_information d-flex flex-column" method="post">
+                <div class="row mb-4">
+                  <label for="product-name" class="col-sm-2 col-form-label product-input-tag">
+                    產品名稱
+                  </label>
+                  <div class="col-sm-10">
+                    <input class="form-control product-input rounded-pill position-relative" type="text" id="product-name">
+                  </div>  
+                </div>
+                <div class="row mb-4">
+                  <label for="product-classification" class="col-sm-2 col-form-label product-input-tag">
+                    選擇分類
+                  </label>
+                  <div class="col-sm-10">
+                    <select class="custom-select form-select product-input rounded-pill position-relative" id="product-classification">
+                      <option selected>
+                      </option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div> 
+                </div>
+                <div class="row mb-4">
+                  <label for="product-price" class="col-sm-2 col-form-label product-input-tag">
+                    <div class="row">
+                      <div class="col">
+                          <div class="row">
+                            共享價/天
+                          </div>
+                      </div>
+                    </div>
+                  </label>
+                  <div class="col-sm-10">
+                    <input class="form-control product-input rounded-pill position-relative" type="number" id="product-price">
+                  </div>  
+                </div>
+                <div class="row mb-4">
+                  <label for="product-location" class="col-sm-2 col-form-label product-input-tag">
+                    所在地點
+                  </label>
+                  <div class="col-sm-10">
+                    <input class="form-control product-input rounded-pill position-relative" type="text" id="product-location">
+                  </div>  
+                </div>
+                <div class="row mb-4">
+                  <label for="start-date" class="col-sm-2 col-form-label product-input-tag">
+                    開始日期
+                  </label>
+                  <div class="col-sm-10">
+                    <input class="form-control product-input rounded-pill position-relative" type="date" id="start-date">
+                  </div> 
+                </div>
+                <div class="row mb-4">
+                  <label for="end-date" class="col-sm-2 col-form-label product-input-tag">
+                    結束日期
+                  </label>
+                  <div class="col-sm-10">
+                    <input class="form-control product-input rounded-pill position-relative" type="date" id="end-date">
+                  </div> 
+                </div>
+                <div class="row mb-4">
+                  <label for="product-content" class="col-sm-2 col-form-label product-input-tag">
+                    內容簡介
+                  </label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control product-input rounded position-relative align-top" id="product-content" style="height: 200px;"></textarea>
+                  </div> 
+                </div>
+                <button type="submit" class="btn position-relative upload">
+                  <img src="./icon/上架.png" class="img-fluid position-absolute top-0 start-50 translate-middle" alt="上架">
+                </button>
+              </form>
+            </div> 
+        </div>
+        <!--Footer-->
+        <footer class="container-fluid mt-4" style="background-color: #927858;">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="row">
+                <div class="col-2 mt-3" style="margin-left:3%;">
+                  <img src="./icon/platformlogo.png" width="95" height="95">
+                </div>
+                <div class="col-6 mt-5 mb-6" style="margin-left:10%;">
+                  <h2 style="color:#FFFFFF;font-weight:700;">享都不用想</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 mt-3">
+              <div class="row">
+                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="/itemfood.html">享食</a>
+                </div>
+                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享衣</a>
+                </div>
+                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享住</a>
+                </div>
+                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享行</a>
+                </div>
+                <div class="col-3 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
+                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">關於我們</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-7 mt-3">
+                  <p style="color:#FFFFFF;font-weight:500;overflow:hidden;">service@sharewithoutthinking.com</p>
+                  <p style="color:#FFFFFF;font-weight:500;">06-123-4567</p>
+                </div>
+                <div class="col-md-5 mt-3 mb-1">
+                  <div class="row">
+                    <div class="col-2">
+                      <img src="./icon/facebook icon.png" width="24" height="24">
+                    </div>
+                    <div class="col-2">
+                      <img src="./icon/instagram icon.png" width="24" height="24">
+                    </div>
+                    <div class="col-2">
+                      <img src="./icon/youtube icon.png" width="24" height="24">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="up.js"></script>
+      </body>
+</html>
