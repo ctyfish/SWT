@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,46 +8,8 @@
         <link href="./itemroom.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <!--Navigation Bar-->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color:#FFFAE7;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);position: sticky;">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/main.html">
-                <img src="./icon/platformlogo.png" alt="" width="45" height="45">
-              </a>
-              <button class="navbar-toggler" style="color:#573605;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/itemfood.html">享食</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/itemcloth.html">享衣</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="#">享住</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/itemtransport.html">享行</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" style="color:#573605;font-weight:500;" href="/aboutus.html">關於我們</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color:#573605;font-weight:500;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="./icon/membericon.png" width="15" height="20">
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" style="background-color:#FFFAE7;" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" style="color:#573605;font-weight:500;" href="#">會員登入</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
+        <nav id="includenavbar" class="fixed-top" style="position:sticky;"></nav>
+        <div id="includelogin"></div>
         <!--Cover photo-->
         <div class="coverphoto">
             <img src="./icon/roomphoto.jpg" class="d-block w-100">
@@ -56,7 +17,7 @@
         <!--Page info-->
         <div class="PageTI" style="margin-top:3vh;margin-left:5vw;margin-right:5vw;">
           <h3 style="color:#573605;font-weight:700;">享住</h3>
-          <h6 style="color:#573605;font-weight:500;line-height:3vh;">內容介紹內容介紹內容介紹內容介紹內容介紹內容介紹內容介紹內容介紹內容介紹</h6>
+          <h6 style="color:#573605;font-weight:500;line-height:3vh;">一個可以盡情分享與尋找房間及其他生活用品的好地方</h6>
           <div class="row">
             <div class="col-md-8">
               <input class="form-control" style="margin-top:1.5vh;width:auto;border-style:none;border-radius: 2px 2px 2px 2px;box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);" type="search" placeholder="搜尋..." aria-label="Search">
@@ -69,61 +30,48 @@
             </div>
           </div>
         </div>
-        <!--Footer-->
-        <footer class="container-fluid mt-4" style="background-color: #927858;">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="row">
-                <div class="col-2 mt-3" style="margin-left:3%;">
-                  <img src="./icon/platformlogo.png" width="95" height="95">
-                </div>
-                <div class="col-6 mt-5 mb-6" style="margin-left:10%;">
-                  <h2 style="color:#FFFFFF;font-weight:700;">享都不用想</h2>
-                </div>
+        <!--Items-->
+        <div class="item-container row" id="additem">
+          <div class="itemblock col-md-2 mt-4" type="button" onclick="window.location='http://luffy.ee.ncku.edu.tw:7320/showproduct_room.html'">
+            <img src="./icon/hostel.jpg" style="height:fit-content;max-width:100%;object-fit:contain;">
+            <h6 style="color:#573605;font-weight:700;margin-top:10px;padding-left:10px;">【享住】</h6>
+            <h5 style="color:#573605;font-weight:700;overflow:hidden;padding-left:10px;">脆弱的上舖</h5>
+            <h5 style="color:#FABD51;font-weight:700;margin-bottom:10px;text-align:end;padding-right:10px;">NT$200/天</h5>
+          </div>
+          <div class="itemblock col-md-2 mt-4" type="button" onclick="window.location='http://luffy.ee.ncku.edu.tw:7320/showproduct_room2.html'">
+            <img src="./icon/closet.jpg" style="height:fit-content;max-width:100%;object-fit:contain;">
+            <h6 style="color:#573605;font-weight:700;margin-top:10px;padding-left:10px;">【享住】</h6>
+            <h5 style="color:#573605;font-weight:700;overflow:hidden;padding-left:10px;">白色衣櫃</h5>
+            <h5 style="color:#FABD51;font-weight:700;margin-bottom:10px;text-align:end;padding-right:10px;">NT$80/天</h5>
+          </div>
+        </div>
+        <!--Side bar-->
+        <div class="sideb" type="button" data-bs-toggle="modal" data-bs-target="#uploadModal">
+          <img src="./icon/Icon_plus(orange).png">
+          <p style="color:#FABD51;font-weight:700;text-align:center;">我要上架</p>
+        </div>
+        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color:#FFFAE7;">
+              <div class="modal-header" style="background-color:#FABD51;">
+                <h6 class="modal-title" id="uploadModalLabel" style="color:#573605;font-weight:500;">選擇上架分類</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-5 mt-3">
-              <div class="row">
-                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
-                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="/itemfood.html">享食</a>
-                </div>
-                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
-                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享衣</a>
-                </div>
-                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
-                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享住</a>
-                </div>
-                <div class="col-2 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
-                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">享行</a>
-                </div>
-                <div class="col-3 text-center" style="border-bottom: 1.5px solid #FFFFFF;padding-bottom:8px;">
-                  <a style="color:#FFFFFF;font-weight:500;text-decoration:none;" href="#">關於我們</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-7 mt-3">
-                  <p style="color:#FFFFFF;font-weight:500;overflow:hidden;">service@sharewithoutthinking.com</p>
-                  <p style="color:#FFFFFF;font-weight:500;">06-123-4567</p>
-                </div>
-                <div class="col-md-5 mt-3 mb-1">
-                  <div class="row">
-                    <div class="col-2">
-                      <img src="./icon/facebook icon.png" width="24" height="24">
-                    </div>
-                    <div class="col-2">
-                      <img src="./icon/instagram icon.png" width="24" height="24">
-                    </div>
-                    <div class="col-2">
-                      <img src="./icon/youtube icon.png" width="24" height="24">
-                    </div>
-                  </div>
-                </div>
+              <div class="modal-body row gap-3 mx-auto">
+                <input type="button" onclick="window.location='http://luffy.ee.ncku.edu.tw:7320/up.html'" class="btn btn-primary" style="border-radius:50px 50px 50px 50px;background-color:#573605;border-style:none;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.2);" value="享食">
+                <input type="button" onclick="window.location='http://luffy.ee.ncku.edu.tw:7320/up_cloth.html'" class="btn btn-primary" style="border-radius:50px 50px 50px 50px;background-color:#573605;border-style:none;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.2);" value="享衣">
+                <input type="button" onclick="window.location='http://luffy.ee.ncku.edu.tw:7320/up_room.html'" class="btn btn-primary" style="border-radius:50px 50px 50px 50px;background-color:#573605;border-style:none;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.2);" value="享住">
+                <input type="button" onclick="window.location='http://luffy.ee.ncku.edu.tw:7320/up_transport.html'" class="btn btn-primary" style="border-radius:50px 50px 50px 50px;background-color:#573605;border-style:none;box-shadow:0px 2px 2px rgba(0, 0, 0, 0.2);" value="享行">
               </div>
             </div>
           </div>
-        </footer>
+        </div>
+        <div id="includefooter" class="mt-4"></div>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+        <script src="./itemroom.js"></script>
     </body>
 </html>

@@ -13,3 +13,119 @@ body{
 .dropdown-item:hover{
     color: #FABD51 !important;
 }
+
+/*delete the box-shadow of input*/
+.modal.fade .modal-dialog.modal-dialog-centered .modal-content .modal-body.mx-auto .container-fluid .mb-2 .form-control:focus{
+    box-shadow: none;
+}
+
+#carouselExampleInterval .carousel-indicators button{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.sideb{
+    background-color: #FFFAE7;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.5vw;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    border-color: #FABD51;
+    position: fixed;
+    top: 60%;
+    right: 0%;
+    z-index: 2;
+}
+
+.sideb img{
+    width: 3.5vw;
+    height: 3.5vw;
+    left: 50%;
+    top: 41%;
+    transform: translate(-50%,-50%);
+    position: relative;
+    opacity: 1;
+}
+
+.sideb p{
+    position: relative;
+    top: 9%;
+    text-align: center;
+    font-size: 0.5vw;
+    opacity: 1;
+}
+
+/*
+.recc .rc .orange-1 .circle1{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FABD51;
+    border-width: 1vw;
+    background-color: #FFFAE7;
+    position: relative;
+    left: 50%;
+    margin-top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.recc .rc .orange-1 .circle2{
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FABD51;
+    border-width: 0.75vw;
+    background-color: #FFFAE7;
+    position: relative;
+    left: 60%;
+    margin-top: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.recc .rc .orange-1 .circle3{
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FABD51;
+    border-width: 0.75vw;
+    background-color: #FFFAE7;
+    position: relative;
+    left: 40%;
+    margin-top: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.recc .rc .orange-1 .circle4{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FABD51;
+    border-width: 0.5vw;
+    background-color: #FFFAE7;
+    position: relative;
+    left: 25%;
+    margin-top: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.recc .rc .orange-1 .circle5{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FABD51;
+    border-width: 0.5vw;
+    background-color: #FFFAE7;
+    position: relative;
+    left: 75%;
+    margin-top: 5%;
+    transform: translate(-50%, -50%);
+}
+*/

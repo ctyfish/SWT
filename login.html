@@ -1,0 +1,75 @@
+<!--Login window-->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color:#FFFAE7;">
+        <div class="modal-header" style="background-color:#FABD51;">
+          <h6 class="modal-title" id="loginModalLabel" style="color:#573605;font-weight:500;">會員登入</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mx-auto" id="containerlogin">
+          <div class="container-fluid" style="border-style:solid;border-color:#A49079;border-radius:50px 50px 50px 50px;height:fit-content;">
+            <h5 style="color:#573605;font-weight:700;text-align:center;margin-top:10px;">會員登入</h5>
+            <form>
+              <div class="mb-2" style="margin-top:35px;">
+                <label for="inputPhonenumber1" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">手機</label>
+                <input type="text" id="inputPhonenumber1" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              </div>
+              <div class="mb-2">
+                <label for="inputPassword1" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">密碼</label>
+                <input type="password" id="inputPassword1" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+                <a type="button" style="display:flex;justify-content:end;font-weight:500;color:rgba(164, 144, 121, 0.5);font-size:inherit;">忘記密碼?</a>
+              </div>
+              <div class="row justify-content-center">
+                <button type="submit" style="font-weight:700;margin-top:40px;height:fit-content;text-align:center;color:#573605;background-color:#FABD51;width:130px;border-style:none;border-radius:50px 50px 50px 50px;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.2);">登入</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!--Sign up window-->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color:#FFFAE7;">
+        <div class="modal-header" style="background-color:#FABD51;">
+          <h6 class="modal-title" id="signupModalLabel" style="color:#573605;font-weight:500;">會員註冊</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mx-auto">
+          <div class="container-fluid" style="border-style:solid;border-color:#A49079;border-radius:50px 50px 50px 50px;height:fit-content;">
+            <h5 style="color:#573605;font-weight:700;text-align:center;margin-top:10px;">會員註冊</h5>
+            <form>
+              <div class="mb-2" style="margin-top:35px;">
+                <label for="inputName" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">真實姓名</label>
+                <input type="text" id="inputName" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              </div>
+              <div class="mb-2">
+                <label for="inputNickname" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">暱稱</label>
+                <input type="text" id="inputNickname" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              </div>
+              <div class="mb-2">
+                <label for="inputMail" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">信箱</label>
+                <input type="text" id="inputMail" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              </div>
+              <div class="mb-2">
+                <label for="inputPhonenumber2" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">手機</label>
+                <input type="text" id="inputPhonenumber2" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              </div>
+              <div class="mb-2">
+                <label for="inputAddress" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">居住地</label>
+                <input type="text" id="inputAddress" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              </div>
+              <div class="mb-2">
+                <label for="inputPassword2" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">密碼</label>
+                <input type="password" id="inputPassword2" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              </div>
+              <div class="row justify-content-center">
+                <button type="submit" style="font-weight:700;margin-top:40px;height:fit-content;text-align:center;color:#573605;background-color:#FABD51;width:130px;border-style:none;border-radius:50px 50px 50px 50px;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.2);">註冊</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -13,3 +13,54 @@ body{
 .dropdown-item:hover{
     color: #FABD51 !important;
 }
+
+.item-container.row{
+    gap: 6.4vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.item-container.row .itemblock.col-md-2.mt-4{
+    padding: 0px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 8px 8px;
+}
+
+.sideb{
+    background-color: #FFFAE7;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.5vw;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    border-color: #FABD51;
+    position: fixed;
+    top: 60%;
+    right: 0%;
+    z-index: 2;
+}
+
+.sideb img{
+    width: 3.5vw;
+    height: 3.5vw;
+    left: 50%;
+    top: 41%;
+    transform: translate(-50%,-50%);
+    position: relative;
+    opacity: 1;
+}
+
+.sideb p{
+    position: relative;
+    top: 9%;
+    text-align: center;
+    font-size: 0.5vw;
+    opacity: 1;
+}
+
+/*delete the box-shadow of input*/
+.modal.fade .modal-dialog.modal-dialog-centered .modal-content .modal-body.mx-auto .container-fluid .mb-2 .form-control:focus{
+    box-shadow: none;
+}

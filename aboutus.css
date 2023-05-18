@@ -12,3 +12,8 @@ body{
 .dropdown-item:hover{
     color: #FABD51 !important;
 }
+
+/*delete the box-shadow of input*/
+.modal.fade .modal-dialog.modal-dialog-centered .modal-content .modal-body.mx-auto .container-fluid .mb-2 .form-control:focus{
+    box-shadow: none;
+}
