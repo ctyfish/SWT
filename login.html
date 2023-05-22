@@ -1,12 +1,12 @@
 <!--Login window-->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content" style="background-color:#FFFAE7;">
         <div class="modal-header" style="background-color:#FABD51;">
           <h6 class="modal-title" id="loginModalLabel" style="color:#573605;font-weight:500;">會員登入</h6>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body mx-auto" id="containerlogin">
+        <div class="modal-body mx-auto">
           <div class="container-fluid" style="border-style:solid;border-color:#A49079;border-radius:50px 50px 50px 50px;height:fit-content;">
             <h5 style="color:#573605;font-weight:700;text-align:center;margin-top:10px;">會員登入</h5>
             <form>
@@ -17,7 +17,7 @@
               <div class="mb-2">
                 <label for="inputPassword1" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">密碼</label>
                 <input type="password" id="inputPassword1" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
-                <a type="button" style="display:flex;justify-content:end;font-weight:500;color:rgba(164, 144, 121, 0.5);font-size:inherit;">忘記密碼?</a>
+                <a type="button" style="display:flex;justify-content:end;font-weight:500;color:rgba(164, 144, 121, 0.5);font-size:inherit;" data-bs-toggle="modal" data-bs-target="#forgetModal" data-dismiss="modal">忘記密碼?</a>
               </div>
               <div class="row justify-content-center">
                 <button type="submit" style="font-weight:700;margin-top:40px;height:fit-content;text-align:center;color:#573605;background-color:#FABD51;width:130px;border-style:none;border-radius:50px 50px 50px 50px;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.2);">登入</button>
@@ -28,8 +28,37 @@
       </div>
     </div>
 </div>
+<!--Forget password-->
+<div class="modal" id="forgetModal" tabindex="-1" aria-labelledby="forgetModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color:#FFFAE7;">
+      <div class="modal-header" style="background-color:#FABD51;">
+        <h6 class="modal-title" id="forgetModalLabel" style="color:#573605;font-weight:500;">會員登入</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body mx-auto">
+        <div class="container-fluid" style="border-style:solid;border-color:#A49079;border-radius:50px 50px 50px 50px;height:fit-content;">
+          <h5 style="color:#573605;font-weight:700;text-align:center;margin-top:10px;">找回密碼</h5>
+          <form>
+            <div class="mb-2" style="margin-top:35px;">
+              <label for="inputMail2" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">註冊信箱</label>
+              <input type="text" id="inputMail2" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              <label for="inputvalid" class="col-form-label" style="padding-bottom:0px;color:#A49079;font-weight:500;">輸入驗證碼</label><br>
+              <canvas id="mycanvas" width="140px" height="40px" style="cursor:pointer;text-align:center;padding-top:5px;padding-bottom:5px;"></canvas>
+              <input type="text" id="inputvalid" class="form-control" style="padding-top:0px;background-color:#FFFAE7;border-color:#A49079;border-bottom-style:solid;border-width:2px;border-top-style:none;border-right-style:none;border-left-style:none;border-radius:0px;">
+              <a type="button" style="display:flex;justify-content:end;font-weight:500;color:rgba(164, 144, 121, 0.5);font-size:inherit;" data-bs-toggle="modal" data-bs-target="#loginModal" data-dismiss="modal">返回登入</a>
+            </div>
+            <div class="row justify-content-center">
+              <button type="submit" style="font-weight:700;margin-top:40px;height:fit-content;text-align:center;color:#573605;background-color:#FABD51;width:130px;border-style:none;border-radius:50px 50px 50px 50px;box-shadow:0px 3px 3px rgba(0, 0, 0, 0.2);">送出</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!--Sign up window-->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+<div class="modal" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content" style="background-color:#FFFAE7;">
         <div class="modal-header" style="background-color:#FABD51;">
@@ -73,3 +102,4 @@
       </div>
     </div>
 </div>
+<script src="./login.js"></script>
